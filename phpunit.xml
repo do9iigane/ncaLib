@@ -1,0 +1,35 @@
+<phpunit backupGlobals="true"
+         backupStaticAttributes="true"
+         bootstrap="tests/load.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="true"
+         stopOnFailure="false"
+         syntaxCheck="false"
+         testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader">
+    <!-- ...comment -->
+    <php>
+        <ini name="memory_limit" value="1024M" />
+    </php>
+    <testsuites>
+        <testsuite>
+            <directory>./tests/</directory>
+            <exclude>./tests/DBUnit</exclude>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./</directory>
+        </whitelist>
+        <blacklist>
+        </blacklist>
+    </filter>
+    <logging>
+        <log type="junit" target="../reports/result.xml"/>
+        <log type="coverage-html" target="../reports"/>
+        <log type="coverage-clover" target="../reports/clover.xml"/>
+        <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
+    </logging>
+</phpunit>

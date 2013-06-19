@@ -1,0 +1,13 @@
+{
+    "name": "vendor/nca-lib",
+    "description": null,
+    "authors": [
+        {
+            "name": "do9iigane",
+            "email": "dokumegane@interestic.com"
+        }
+    ],
+    "require": {
+
+    }
+}
